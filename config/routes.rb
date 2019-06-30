@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
   root 'pages#index'
+  
+  resources :skills do
+    member do
+      get :delete
+    end
+  end
+
+  
 
   get 'pages/about'
 
