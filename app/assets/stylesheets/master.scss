@@ -1,0 +1,21 @@
+$orange: #F19143;
+$ivory: #EFECCA;
+$near-black: #191716;
+$light-gray: #B5B4B3;
+$dark-gray: #5E565A; 
+$white: #FFFFFF;
+
+body {
+    background-color: $near-black;
+    color: $light-gray;
+    font-family: 'Helvetica', sans-serif;
+}
+
+h1 {
+    color: $white;
+}
+
+h3 {
+    color: $orange;
+}
+
