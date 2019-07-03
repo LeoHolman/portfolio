@@ -1,0 +1,43 @@
+<section id="splash" class="home">    
+    <h2 id="splash-quote">Full stack developer specializing in Ruby on Rails  development: <strong>Ruby, Rails, PostgreSQL, HTML, CSS, JavaScript</strong><h3>
+</section>
+<section id="skills">
+    <h3>Skills</h3>
+    <% @skills.each do |skill| %>
+    <section class="home-skills">
+        <h4 class="skillTitle"><%= skill.name %></h4>
+    </section>
+<% end %>
+</section>
+<section id="education" class="home">
+    <h3>Education</h3>
+    <h4>Bachelor of Science (Double Major) - Rochester Institute of Technology</h4>
+    <p>Graduated: May 2019</p>
+    <p>GPA - <strong>3.9</strong></p>
+    <p>Honors and awards</p>
+    <ul>
+        <li>Honors Student</li>
+        <li>Dean's List x7 (Term GPA > 3.5)</li>
+        <li>Outstanding Undergraduate Scholar Award (awarded to top 5% of students)</li>
+        <li>Langauge Science and Computational Linguistics Student Excellence Award</li>
+        <li>Study Abroad - Nanjing, China, Spring 2018</li>
+    </ul>
+</section>
+<section id="projects">
+    <h3>Projects</h3>
+    <% @projects.each do |project| %>
+    <section class="projects">
+        <%= link_to(project_path(project)) do %>
+            <h3><%= project.name %></h3>
+        <% end %>
+        <p><%= project.description %></p>
+        <% project.skills.each do |skill| %>
+            <%= link_to(skill_path(skill)) do %>
+                <button class="skill-button"><%= skill.name %></button>
+            <% end %>
+        <% end %>
+    </section>
+<% end %>
+<section id="experience">
+    <h3>Work Experience</h3>
+</section>
