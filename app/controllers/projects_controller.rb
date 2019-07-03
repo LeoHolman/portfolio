@@ -5,5 +5,8 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @project = Project.find(params[:id])
+    @page_title = @project.name
+    
   end
 end

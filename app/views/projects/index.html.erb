@@ -1,6 +1,8 @@
 <% @projects.each do |project| %>
     <section class="projects">
-        <h3><%= project.name %></h3>
+        <%= link_to(project_path(project)) do %>
+            <h3><%= project.name %></h3>
+        <% end %>
         <p><%= project.description %></p>
         <% project.skills.each do |skill| %>
             <%= link_to(skill_path(skill)) do %>
