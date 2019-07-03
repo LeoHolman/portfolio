@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <h1><%= @page_title %></h1>
+    <nav>
+      <button class='navbar'><%= link_to 'Home', root_path %></button>
+      <button class='navbar'><%= link_to 'Skills', skills_path %></button>
+      <button class='navbar'><%= link_to 'Resume', root_path %></button>
+      <button class='navbar'><%= link_to 'About', pages_about_path %></button>
+    </nav>
     <%= yield %>
   </body>
 </html>

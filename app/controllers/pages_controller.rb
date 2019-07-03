@@ -1,10 +1,13 @@
 class PagesController < ApplicationController
   def index
+    @page_title = "Leo Holman"
   end
 
   def about
+    @page_title = "About"
   end
 
-  def contact
+  def resume
+    @page_title = "Resumé"
   end
 end

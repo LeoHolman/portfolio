@@ -1,5 +1,6 @@
 class SkillsController < ApplicationController
   def index
+    @page_title = "Skills"
     @skills = Skill.all
   end
 
