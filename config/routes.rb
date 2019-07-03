@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'projects/index'
+
+  get 'projects/show'
+
   root 'pages#index'
   
   resources :skills do
