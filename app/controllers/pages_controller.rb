@@ -8,6 +8,6 @@ class PagesController < ApplicationController
   end
 
   def resume
-    @page_title = "Resumé"
+    @page_title = "Resume"
   end
 end

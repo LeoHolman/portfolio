@@ -11,10 +11,18 @@
   <body>
     <h1><%= @page_title %></h1>
     <nav>
-      <button class='navbar'><%= link_to 'Home', root_path %></button>
-      <button class='navbar'><%= link_to 'Skills', skills_path %></button>
-      <button class='navbar'><%= link_to 'Resume', root_path %></button>
-      <button class='navbar'><%= link_to 'About', pages_about_path %></button>
+      <%= link_to(root_path) do%>
+        <button class='navbar'>Home</button>
+      <% end %> |
+      <%= link_to(skills_path) do%>
+        <button class='navbar'>Skills</button>
+      <% end %> |
+      <%= link_to(pages_resume_path) do%>
+        <button class='navbar'>Resume</button>
+      <% end %> |
+      <%= link_to(pages_about_path) do%>
+        <button class='navbar'>About</button>
+      <% end %>
     </nav>
     <%= yield %>
   </body>

@@ -6,6 +6,8 @@ $dark-gray: #5E565A;
 $white: #FFFFFF;
 
 body {
+    width: 80vw;
+    margin: 0 auto;
     background-color: $near-black;
     color: $light-gray;
     font-family: 'Helvetica', sans-serif;
@@ -19,3 +21,22 @@ h3 {
     color: $orange;
 }
 
+nav {
+    text-align: center;
+
+}
+
+nav button {
+    background-color: $ivory;
+    color: $near-black;
+    font-size: 1.3em;
+    border:none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    margin: 10px;
+    box-shadow: 3px 3px 5px black;
+}
+
+nav a {
+    text-decoration: none;
+}
