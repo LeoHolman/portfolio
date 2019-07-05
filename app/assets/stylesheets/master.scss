@@ -42,18 +42,38 @@ nav a {
     text-decoration: none;
 }
 
+.home-skills{
+    background-color: white;
+    text-align: center;
+    //find a way to vertically align text
+    vertical-align: middle;
+    height: 70px;
+    border-radius: 13px;
+    text-decoration: none;
+}
+
+.home-skills a {
+    text-decoration: none;
+    vertical-align: bottom;
+}
+
 .panel {
     display: grid;
     grid-column-gap: 50px;
-    // grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
     // text-align: center;
+}
+
+.panel a {
+    text-decoration: none;
 }
 
 .projects {
     margin-top: 20px;
     padding: 5px 20px 20px;
-    border-radius: 9px;
+    border-radius: 11px;
     box-shadow: 5px 5px 10px black, -5px -5px 10px black;
+    background-color: #5E565A;
 }
 
 .projects button {

@@ -1,16 +1,20 @@
 <section id="splash" class="home">    
     <h3 id="splash-quote">Full stack developer specializing in Ruby on Rails  development: <strong>Ruby, Rails, PostgreSQL, HTML, CSS, JavaScript</strong><h3>
 </section>
+
+<h2>Skills</h2>
 <section id="skills" class="panel">
-    <h2>Skills</h2>
     <% @skills.each do |skill| %>
-    <section class="home-skills">
-        <h4 class="skillTitle"><%= skill.name %></h4>
-    </section>
-<% end %>
+        <%= link_to(skill_path(skill)) do %>
+            <section class="home-skills">
+                <h4><%= skill.name %></h4>
+            </section>
+        <% end %>
+    <% end %>
 </section>
+
+<h2>Education</h2>
 <section id="education" class="home">
-    <h2>Education</h2>
     <h4>Bachelor of Science (Double Major) - Rochester Institute of Technology</h4>
     <p>Graduated: May 2019</p>
     <p>GPA - <strong>3.9</strong></p>
@@ -23,21 +27,24 @@
         <li>Study Abroad - Nanjing, China, Spring 2018</li>
     </ul>
 </section>
+
+<h2>Projects</h2>
 <section id="projects" class="panel">
-    <h2>Projects</h2>
     <% @projects.each do |project| %>
-    <section class="projects">
-        <%= link_to(project_path(project)) do %>
-            <h3><%= project.name %></h3>
-        <% end %>
-        <p><%= project.description %></p>
-        <% project.skills.each do |skill| %>
-            <%= link_to(skill_path(skill)) do %>
-                <button class="skill-button"><%= skill.name %></button>
+        <section class="projects">
+            <%= link_to(project_path(project)) do %>
+                <h3><%= project.name %></h3>
             <% end %>
-        <% end %>
-    </section>
-<% end %>
+            <p><%= project.description %></p>
+            <% project.skills.each do |skill| %>
+                <%= link_to(skill_path(skill)) do %>
+                    <button class="skill-button"><%= skill.name %></button>
+                <% end %>
+            <% end %>
+        </section>
+    <% end %>
+</section>
+
+<h2>Work Experience</h2>
 <section id="experience">
-    <h2>Work Experience</h2>
 </section>
