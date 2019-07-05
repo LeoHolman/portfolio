@@ -18,7 +18,7 @@ h1 {
     font-size: 2.5em;
 }
 
-h3 {
+h2 {
     color: $orange;
 }
 
@@ -40,6 +40,13 @@ nav button {
 
 nav a {
     text-decoration: none;
+}
+
+.panel {
+    display: grid;
+    grid-column-gap: 50px;
+    // grid-template-columns: auto auto auto;
+    // text-align: center;
 }
 
 .projects {
@@ -70,4 +77,8 @@ nav a {
     width: 20vw;
     float: left;
     margin-right: 30px;
+}
+
+#splash-quote strong {
+    color: white;
 }
