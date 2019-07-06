@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'skill_sets/index'
+
+  get 'skill_sets/show'
+
   root 'pages#index'
   
   resources :skills do
