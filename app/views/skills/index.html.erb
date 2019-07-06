@@ -1,10 +1,12 @@
 <% @skills.each do |skill| %>
     <section class="skills">
-        <h3 class="skillTitle"><%= skill.name %></h3>
+        <h3 class="skill-title"><%= skill.name %></h3>
         <% skill.experiences.each do |experience| %>
-            <h4 class="experienceName"><%= experience.name %><h4> 
-            <p class="experienceSource">from <%= experience.source %></p>
-            <p class="experienceCompletedOn">on <%= experience.completed_on %></p>
+            <section class="skill-detail">
+                <h4 class="experienceName"><%= experience.name %><h4> 
+                <p class="experienceSource">from <%= experience.source %></p>
+                <p class="experienceCompletedOn">on <%= experience.completed_on %></p>
+            </section>
         <% end %>
     </section>
 <% end %>
