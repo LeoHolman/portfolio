@@ -59,7 +59,7 @@ nav a {
 
 .panel {
     display: grid;
-    grid-column-gap: 50px;
+    grid-column-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows:auto;
     // text-align: center;
@@ -99,7 +99,7 @@ nav a {
     background-color:white;
     border:3px solid dimgray;
     border-radius: 7px;
-    padding:0;
+    margin-top: 20px;
 }
 
 .skill-set h3{
