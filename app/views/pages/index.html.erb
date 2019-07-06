@@ -3,11 +3,11 @@
 </section>
 
 <h2>Skills</h2>
-<section id="skills" class="panel">
-    <% @skills.each do |skill| %>
-        <%= link_to(skill_path(skill)) do %>
-            <section class="home-skills">
-                <h4><%= skill.name %></h4>
+<section id="skillSets" class="panel">
+    <% @skill_sets.each do |skill_set| %>
+        <%= link_to(skill_set_path(skill_set)) do %>
+            <section class="skill-set">
+                <h4><%= skill_set.name %></h4>
             </section>
         <% end %>
     <% end %>

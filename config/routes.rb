@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :projects do
   end
 
+  resources :skill_sets do
+  end
   get 'pages/about'
 
   get 'pages/resume'
