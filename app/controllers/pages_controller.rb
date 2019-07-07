@@ -3,6 +3,7 @@ class PagesController < ApplicationController
     @skill_sets = SkillSet.all
     @skills = Skill.take(5)
     @projects = Project.take(5)
+    @jobs = Job.take(5)
   end
 
   def about
