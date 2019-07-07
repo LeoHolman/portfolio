@@ -1,5 +1,6 @@
 class SkillSetsController < ApplicationController
   def index
+    @page_title = "Skills"
     @skill_sets = SkillSet.all
   end
 
