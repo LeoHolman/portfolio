@@ -1,6 +1,5 @@
 class PagesController < ApplicationController
   def index
-    @page_title = "Leo Holman"
     @skill_sets = SkillSet.all
     @skills = Skill.take(5)
     @projects = Project.take(5)

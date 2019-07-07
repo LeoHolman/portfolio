@@ -1,7 +1,24 @@
-<% @skill.experiences.each do |experience| %>
-    <section class="skill-detail">
-        <h4 class="experienceName"><%= experience.name %><h4> 
-        <p class="experienceSource">from <%= experience.source %></p>
-        <p class="experienceCompletedOn">on <%= experience.completed_on %></p>
+<h2>Projects using <%= @skill.name %> </h2>
+<% @skill.projects.each do |project| %>
+    <section class="projects">
+        <%= link_to(project_path(project)) do %>
+            <h3><%= project.name %></h3>
+        <% end %>
+        <p><%= project.description %></p>
+        <% project.skills.each do |skill| %>
+            <%= link_to(skill_path(skill)) do %>
+                <button class="skill-button"><%= skill.name %></button>
+            <% end %>
+        <% end %>
     </section>
 <% end %>
+
+<h2>Other Experience with <%= @skill.name %></h2>
+<section class="panel">
+    <% @skill.experiences.each do |experience| %>
+        <section class="skill-detail">
+            <h4 class="experienceName"><%= experience.name %><h4> 
+            <p class="experienceSource">from <%= experience.source %></p>
+        </section>
+    <% end %>
+</section>
