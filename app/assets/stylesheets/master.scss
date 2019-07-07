@@ -1,11 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald|Source+Sans+Pro&display=swap);
 
-$orange: #F19143;
-$ivory: #EFECCA;
-$near-black: #191716;
-$light-gray: #B5B4B3;
-$dark-gray: #5E565A; 
-$white: #FFFFFF;
+// $orange: #F19143;
+// $ivory: #EFECCA;
+// $near-black: #191716;
+// $light-gray: #B5B4B3;
+// $dark-gray: #5E565A; 
+// $white: #FFFFFF;
+
+@import 'variables';
 
 body {
     width: 80vw;
@@ -56,11 +58,13 @@ nav a {
     text-decoration: none;
 }
 
+strong {
+    color: white;
+}
+
 .home-skills{
     background-color: white;
     text-align: center;
-    //find a way to vertically align text
-    vertical-align: middle;
     height: 70px;
     border-radius: 13px;
     text-decoration: none;
@@ -81,81 +85,6 @@ nav a {
 
 .panel a {
     text-decoration: none;
-}
-
-.projects {
-    margin-top: 20px;
-    padding: 5px 20px 20px;
-    border-radius: 11px;
-    box-shadow: 5px 5px 10px black, -5px -5px 10px black;
-    background-color: #5E565A;
-}
-
-.projects a {
-    text-decoration: none;
-}
-
-.projects button {
-    background-color: $near-black;
-    padding: 4px 7px;
-    border: solid 1px $orange;
-    border-radius: 10px;
-    color: $orange;
-}
-
-.projects h3 {
-    color: white;
-}
-
-.skill-detail {
-    border-left: 3px solid $orange;
-    padding-left: .5em;
-    margin-left: .5em;
-    // border-radius: 7px;
-    // box-shadow: 3px 3px 10px black;
-}
-
-.skill-detail h4, p {
-    padding-top: 5px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-.skill-set{
-    background-color:white;
-    border:3px solid dimgray;
-    border-radius: 7px;
-    margin-top: 20px;
-}
-
-.skill-set h3{
-    font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
-    color:white;
-    background:dimgray;
-    margin:0;
-    padding:.5em;
-}
-
-.skill-set h4{
-    font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
-    color:dimgray;
-    padding:.25em;
-}
-
-.skills {
-    color: $dark-gray;
-    background-color: white;
-    border-radius: 7px;
-    height: 100px;
-    text-align: center;
-}
-
-.skills a{
-    text-decoration: none;
-}
-
-.skills h3 {
-    padding-top: 30px;
 }
 
 #name {
@@ -179,10 +108,4 @@ nav a {
     font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
 }
 
-#splash-quote strong {
-    color: white;
-}
 
-#skill-sets{
-    max-width: 50em;
-}
