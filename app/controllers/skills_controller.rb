@@ -5,6 +5,8 @@ class SkillsController < ApplicationController
   end
 
   def show
+    @skill = Skill.find(params[:id])
+    @page_title = @skill.name
   end
 
   def new

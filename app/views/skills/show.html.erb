@@ -1,2 +1,7 @@
-<h1>Skills#show</h1>
-<p>Find me in app/views/skills/show.html.erb</p>
+<% @skill.experiences.each do |experience| %>
+    <section class="skill-detail">
+        <h4 class="experienceName"><%= experience.name %><h4> 
+        <p class="experienceSource">from <%= experience.source %></p>
+        <p class="experienceCompletedOn">on <%= experience.completed_on %></p>
+    </section>
+<% end %>

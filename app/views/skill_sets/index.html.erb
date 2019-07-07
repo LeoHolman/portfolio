@@ -1,14 +1,14 @@
 <section id="skillSets" class="panel">
     <% @skill_sets.each do |skill_set| %>
-        <%= link_to(skill_set_path(skill_set)) do %>
-            <section class="skill-set">
+        <section class="skill-set">
+            <%= link_to(skill_set_path(skill_set)) do %>
                 <h3><%= skill_set.name %></h3>
                 <% skill_set.skills.each do |skill| %>
                     <%= link_to(skill_path(skill)) do %>
                         <h4><%= skill.name %></h4>
                     <% end %>
                 <% end %>
-            </section>
-        <% end %>
+            <% end %>
+        </section>
     <% end %>
 </section>
