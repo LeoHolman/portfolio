@@ -29,14 +29,21 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.03em;
 }
 
+header {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+}
+
 nav {
-    text-align: center;
+    text-align: right;
+    display: inline;
+    margin-top: 5vh;
 
 }
 
 nav button {
-    background-color: $ivory;
-    color: $near-black;
+    background-color: inherit;
+    color: white;
     font-size: 1.3em;
     border:none;
     border-radius: 7px;
@@ -154,6 +161,7 @@ nav a {
 #name {
     font-size: 3em;
     display: inline;
+    margin-top: 4vh;
 }
 
 #pdf {

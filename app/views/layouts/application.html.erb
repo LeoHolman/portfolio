@@ -9,21 +9,23 @@
   </head>
 
   <body>
-    <h1 id="name">Leo Holman</h1>
-    <nav>
-      <%= link_to(root_path) do%>
-        <button class='navbar'>Home</button>
-      <% end %> |
-      <%= link_to(skill_sets_path) do%>
-        <button class='navbar'>Skills</button>
-      <% end %> |
-      <%= link_to(pages_resume_path) do%>
-        <button class='navbar'>Resume</button>
-      <% end %> |
-      <%= link_to(pages_about_path) do%>
-        <button class='navbar'>About</button>
-      <% end %>
-    </nav>
+    <header>
+      <h1 id="name">Leo Holman</h1>
+      <nav>
+        <%= link_to(root_path) do%>
+          <button class='navbar'>Home</button>
+        <% end %> |
+        <%= link_to(skill_sets_path) do%>
+          <button class='navbar'>Skills</button>
+        <% end %> |
+        <%= link_to(pages_resume_path) do%>
+          <button class='navbar'>Resume</button>
+        <% end %> |
+        <%= link_to(pages_about_path) do%>
+          <button class='navbar'>About</button>
+        <% end %>
+      </nav>
+      </header>
     <hr />
     <h1><%= @page_title %></h1>
     <%= yield %>
