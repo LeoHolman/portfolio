@@ -1,2 +1,9 @@
-<h1>SkillSets#show</h1>
-<p>Find me in app/views/skill_sets/show.html.erb</p>
+<section class="panel">
+    <% @skill_set.skills.each do |skill| %>
+        <%= link_to(skill_path(skill)) do %>
+            <section class="skills">
+                <h3 class="skill-title"><%= skill.name %></h3>
+            </section>
+        <% end %>
+    <% end %>
+</section>
