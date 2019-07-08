@@ -5,7 +5,7 @@
 // $near-black: #191716;
 // $light-gray: #B5B4B3;
 // $dark-gray: #5E565A; 
-// $white: #FFFFFF;
+// $white: #F5F1ED;
 
 @import 'variables';
 
@@ -51,7 +51,12 @@ nav button {
     border-radius: 7px;
     padding: 10px 20px;
     margin: 10px;
-    box-shadow: 3px 3px 5px black;
+    // box-shadow: 3px 3px 5px black;
+}
+
+nav button:hover{
+    cursor: pointer;
+    color: $orange;
 }
 
 nav a {
@@ -59,11 +64,11 @@ nav a {
 }
 
 strong {
-    color: white;
+    color: $white;
 }
 
 .home-skills{
-    background-color: white;
+    background-color: $white;
     text-align: center;
     height: 70px;
     border-radius: 13px;
@@ -85,6 +90,11 @@ strong {
 
 .panel a {
     text-decoration: none;
+}
+
+#education h4{
+    color: $white;
+    letter-spacing: .08em;
 }
 
 #name {
