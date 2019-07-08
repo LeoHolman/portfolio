@@ -13,4 +13,7 @@ class PagesController < ApplicationController
   def resume
     @page_title = "Resume"
   end
+
+  def admin
+  end
 end

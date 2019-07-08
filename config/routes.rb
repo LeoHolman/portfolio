@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :admins
   get 'skill_sets/index'
 
   get 'skill_sets/show'
@@ -17,8 +18,11 @@ Rails.application.routes.draw do
 
   resources :skill_sets do
   end
+
   get 'pages/about'
 
   get 'pages/resume'
+
+  get '/admin', to: "pages#admin"
 
 end
