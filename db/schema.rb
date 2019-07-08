@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20190707155008) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "experiences", force: :cascade do |t|
     t.string "name"
     t.string "source"
@@ -40,8 +43,8 @@ ActiveRecord::Schema.define(version: 20190707155008) do
   end
 
   create_table "projects_skills", id: false, force: :cascade do |t|
-    t.integer "project_id", null: false
-    t.integer "skill_id", null: false
+    t.bigint "project_id", null: false
+    t.bigint "skill_id", null: false
   end
 
   create_table "skill_sets", force: :cascade do |t|
@@ -51,8 +54,8 @@ ActiveRecord::Schema.define(version: 20190707155008) do
   end
 
   create_table "skill_sets_skills", id: false, force: :cascade do |t|
-    t.integer "skill_set_id", null: false
-    t.integer "skill_id", null: false
+    t.bigint "skill_set_id", null: false
+    t.bigint "skill_id", null: false
   end
 
   create_table "skills", force: :cascade do |t|
