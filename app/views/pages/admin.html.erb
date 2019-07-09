@@ -1,5 +1,69 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<%= link_to 'Sign in', new_admin_session_path %>
-<%= link_to 'Sign up', new_admin_registration_path %>
+
+<%= link_to 'Sign in', new_admin_session_path unless admin_signed_in? %>
+
+
+<section id="admin-panel">
+    <section>
+        <p><%= link_to "Add a new skill", new_skill_path%></p>
+        <h3>Edit skills:</h3>
+        <% @skills.each do |skill| %>
+            <p><%="#{skill.name}: "%></p>
+            <p>
+                <%= link_to "Show", skill_path(skill.id)%> |
+                <%= link_to "Edit", edit_skill_path(skill.id)%> |
+                <%= link_to "Delete", delete_skill_path(skill.id)%>
+            </p>
+        <% end %>
+    </section>
+    <section>
+        <p><%= link_to "Add a new skill set", new_skill_set_path %></p>
+        <h3>Edit skill sets:</h3>
+        <% @skill_sets.each do |skill_set| %>
+            <p><%="#{skill_set.name}: "%></p>
+            <p>
+                <%= link_to "Show", skill_set_path(skill_set.id)%> |
+                <%= link_to "Edit", edit_skill_set_path(skill_set.id)%> |
+                <%= link_to "Delete", delete_skill_set_path(skill_set.id)%>
+            </p>
+        <% end %>
+    </section>
+    <section>
+        <p><%= link_to "Add a new experience", new_experience_path %></p>
+        <h3>Edit experiences: </h3>
+        <% @experiences.each do |experience| %>
+            <p><%="#{experience.name}: "%></p>
+            <p>
+                <%= link_to "Show", experience_path(experience.id)%> |
+                <%= link_to "Edit", edit_experience_path(experience.id)%> |
+                <%= link_to "Delete", delete_experience_path(experience.id)%>
+            </p>
+        <% end %>
+    </section>
+    <section>
+        <p><%= link_to "Add a new project", new_project_path %></p>
+        <h3>Edit projects: </h3>
+        <% @projects.each do |project| %>
+            <p><%="#{project.name}: "%></p>
+            <p>
+                <%= link_to "Show", project_path(project.id)%> |
+                <%= link_to "Edit", edit_project_path(project.id)%> |
+                <%= link_to "Delete", delete_project_path(project.id)%>
+            </p>
+        <% end %>
+    </section>
+    <section>
+        <p><%= link_to "Add a new job", new_job_path %></p>
+        <h3>Edit jobs: </h3>
+        <% @jobs.each do |job| %>
+            <p><%="#{job.name}: "%></p>
+            <p>
+                <%= link_to "Show", job_path(job.id)%> |
+                <%= link_to "Edit", edit_job_path(job.id)%> |
+                <%= link_to "Delete", delete_job_path(job.id)%>
+            </p>
+        <% end %>
+    </section>   
+</section>

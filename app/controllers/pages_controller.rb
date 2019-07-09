@@ -15,5 +15,10 @@ class PagesController < ApplicationController
   end
 
   def admin
+    @skills = Skill.all
+    @skill_sets = SkillSet.all
+    @experiences = Experience.all
+    @projects = Project.all
+    @jobs = Job.all
   end
 end
