@@ -1,2 +1,4 @@
-<h1>Skills#new</h1>
-<p>Find me in app/views/skills/new.html.erb</p>
+<%= simple_form_for @skill do |f| %>
+    <%= f.input :name %>
+    <%= f.submit %>
+<% end %>

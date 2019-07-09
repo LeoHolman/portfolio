@@ -26,15 +26,12 @@ Rails.application.routes.draw do
   end
 
   resources :skill_sets do
-    member do 
+    member do
       get :delete
     end
   end
 
   devise_for :admins
-  get 'skill_sets/index'
-
-  get 'skill_sets/show'
 
   get 'pages/about'
 

@@ -1,0 +1,7 @@
+<%= simple_form_for @skill_set do |f| %>
+    <%= f.input :name %>
+    <%= fields_for(@skill_set_skills) do |sss| %>
+        <%= collection_select(:skills, :name, @all_skills, :id, :name, {}, {:multiple => true})%>
+    <% end %>
+    <%= f.submit "Add" %>
+<% end %>
