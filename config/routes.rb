@@ -26,9 +26,6 @@ Rails.application.routes.draw do
   end
 
   resources :skill_sets do
-    member do
-      get :delete
-    end
   end
 
   devise_for :admins

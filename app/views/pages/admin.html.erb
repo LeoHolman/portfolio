@@ -26,7 +26,7 @@
             <p>
                 <%= link_to "Show", skill_set_path(skill_set.id)%> |
                 <%= link_to "Edit", edit_skill_set_path(skill_set.id)%> |
-                <%= link_to "Delete", delete_skill_set_path(skill_set.id)%>
+                <%= link_to "Delete", skill_set_path(skill_set.id), { :method => 'delete' }%>
             </p>
         <% end %>
     </section>
