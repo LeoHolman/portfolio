@@ -1,0 +1,11 @@
+<%= simple_form_for(@project) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <br />
+    <%= f.input :description %>
+    <br />
+    <%= f.select(:skills, @all_skills.map { |skill| [ skill.name, skill.id]}, {include_blank: false}, { :multiple => true, :size => @all_skills.size}) %>
+    <br />
+    <%= f.submit "Submit" %>
+<% end %>
