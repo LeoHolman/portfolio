@@ -17,6 +17,7 @@ class JobsController < ApplicationController
   end
 
   def show
+    @job = Job.find(params[:id])
   end
 
   def edit
@@ -34,6 +35,9 @@ class JobsController < ApplicationController
   end
 
   def destroy
+    @job = Job.find(params[:id])
+    @job.destroy
+    redirect_to admin_path
   end
 
   private

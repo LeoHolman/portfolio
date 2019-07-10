@@ -1,2 +1,5 @@
-<h1>Jobs#show</h1>
-<p>Find me in app/views/jobs/show.html.erb</p>
+<%= link_to "Admin", admin_path%>
+<p>Title: <strong><%= @job.title%> </strong></p>
+<p>Employer: <strong><%= @job.employer%> </strong></p>
+<p>start date: <strong><%= @job.start_date%> </strong></p>
+<p>end_date: <strong><%= @job.end_date%> </strong></p>
