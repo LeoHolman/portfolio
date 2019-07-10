@@ -1,0 +1,5 @@
+<%= simple_form_for(@skill_set) do |f| %>
+    <%= f.input :name %>
+<%= f.select :skills, @all_skills.map { |skill| [ skill.name, skill.id] }, {}, { :multiple => true, :size => @all_skills.size} %>
+    <%= f.submit 'Submit' %>
+<% end %>
