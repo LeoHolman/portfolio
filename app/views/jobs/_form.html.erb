@@ -1,0 +1,7 @@
+<%= simple_form_for(@job) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :employer %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date, :include_blank => true %>
+    <%= f.submit "Submit" %>
+<% end %>

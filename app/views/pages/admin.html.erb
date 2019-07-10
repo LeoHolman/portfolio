@@ -59,7 +59,7 @@
         <p><%= link_to "Add a new job", new_job_path %></p>
         <h3>Edit jobs: </h3>
         <% @jobs.each do |job| %>
-            <p><%="#{job.name}: "%></p>
+            <p><%="#{job.title}: "%></p>
             <p>
                 <%= link_to "Show", job_path(job.id)%> |
                 <%= link_to "Edit", edit_job_path(job.id)%> |
