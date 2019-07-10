@@ -3,6 +3,7 @@
 
 
 <%= link_to 'Sign in', new_admin_session_path unless admin_signed_in? %>
+<%= link_to 'Sign out', destroy_admin_session_path, { :method => 'delete' } if admin_signed_in? %>
 
 
 <section id="admin-panel">
@@ -14,7 +15,7 @@
             <p>
                 <%= link_to "Show", skill_path(skill.id)%> |
                 <%= link_to "Edit", edit_skill_path(skill.id)%> |
-                <%= link_to "Delete", delete_skill_path(skill.id)%>
+                <%= link_to "Delete", skill_path(skill.id), { :method => 'delete' }%>
             </p>
         <% end %>
     </section>
@@ -38,7 +39,7 @@
             <p>
                 <%= link_to "Show", experience_path(experience.id)%> |
                 <%= link_to "Edit", edit_experience_path(experience.id)%> |
-                <%= link_to "Delete", delete_experience_path(experience.id)%>
+                <%= link_to "Delete", experience_path(experience.id), { :method => 'delete' }%>
             </p>
         <% end %>
     </section>
@@ -50,7 +51,7 @@
             <p>
                 <%= link_to "Show", project_path(project.id)%> |
                 <%= link_to "Edit", edit_project_path(project.id)%> |
-                <%= link_to "Delete", delete_project_path(project.id)%>
+                <%= link_to "Delete", project_path(project.id), { :method => 'delete' }%>
             </p>
         <% end %>
     </section>
@@ -62,7 +63,7 @@
             <p>
                 <%= link_to "Show", job_path(job.id)%> |
                 <%= link_to "Edit", edit_job_path(job.id)%> |
-                <%= link_to "Delete", delete_job_path(job.id)%>
+                <%= link_to "Delete", job_path(job.id), { :method => 'delete' } %>
             </p>
         <% end %>
     </section>   

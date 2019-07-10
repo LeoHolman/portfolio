@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :authenticate_admin!, only: [ :admin ]
   def index
     @skill_sets = SkillSet.all
     @skills = Skill.take(5)
