@@ -20,6 +20,17 @@ class JobsController < ApplicationController
   end
 
   def edit
+    @job = Job.find(params[:id])
+  end
+
+  def update
+    @job = Job.find(params[:id])
+    @job.update_attributes(job_params)
+    if @job.valid? 
+      redirect_to admin_path
+    else
+      render('edit')
+    end
   end
 
   def destroy
