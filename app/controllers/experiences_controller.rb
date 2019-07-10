@@ -1,4 +1,5 @@
 class ExperiencesController < ApplicationController
+  
   def new
     @experience = Experience.new
     @page_title = "Add a new experience"
@@ -15,12 +16,21 @@ class ExperiencesController < ApplicationController
   end
 
   def show
-  end
-
-  def update
+    @experience = Experience.find(params[:id])
   end
 
   def edit
+    @experience = Experience.find(params[:id])
+    @all_skills = Skill.all
+  end
+  
+  def update
+    @experience = Experience.find(params[:id])
+    if @experience.update_attributes(experience_params)
+      redirect_to experience_path(@experience)
+    else
+      render('edit')
+    end
   end
 
   def delete

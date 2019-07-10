@@ -1,2 +1,5 @@
-<h1>Experiences#show</h1>
-<p>Find me in app/views/experiences/show.html.erb</p>
+<p>Name: <strong><%= @experience.name %></strong></p>
+<p>Source: <strong><%= @experience.source %></strong> </p>
+<p>Completed on: <strong><%= @experience.completed_on %></strong> </p>
+<p>Skill: <strong><%= @experience.skill.name %></strong></p>
+<%= link_to "Admin", admin_path %>
