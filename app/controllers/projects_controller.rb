@@ -27,9 +27,31 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    @project = Project.find(params[:id])
+    @all_skills = Skill.all
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    @project.update_attributes(project_params)
+    new_skills = params[:project][:skills]
+
+    # Remove all old skills
+    @project.skills.all.each do |skill|
+      @project.skills.delete(skill)
+    end
+
+    # Add new skills
+    new_skills.each do |new_skill|
+      @project.skills << Skill.find(new_skill) unless new_skill.blank?
+    end
+    redirect_to admin_path
   end
 
   def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
+    redirect_to admin_path
   end
 
   private 
