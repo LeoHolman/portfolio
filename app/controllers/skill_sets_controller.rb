@@ -35,12 +35,6 @@ class SkillSetsController < ApplicationController
     @skill_set = SkillSet.find(params[:id])
   end
 
-  def delete
-    @page_title = "Delete Skill Set"
-    @skill_set = SkillSet.find(params[:id])
-    binding.pry
-  end
-
   def destroy
     @skill_set = SkillSet.find(params[:id])
     @skill_set.destroy

@@ -45,9 +45,6 @@ class SkillsController < ApplicationController
     redirect_to(admin_path)
   end
 
-  def delete
-  end
-
   private
 
   def skill_params
