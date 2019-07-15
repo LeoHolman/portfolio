@@ -21,9 +21,9 @@
 <h2>Education</h2>
 <section id="education" class="home">
     <h4>Bachelor of Science (Double Major) - Rochester Institute of Technology</h4>
-    <p>Graduated: May 2019</p>
-    <p>GPA - <strong>3.9</strong></p>
-    <p>Honors and awards</p>
+    <p>Graduated: <strong>May 2019</strong></p>
+    <p>GPA: <strong>3.9</strong></p>
+    <h4>Honors and awards</h4>
     <ul>
         <li>Honors Student</li>
         <li>Dean's List x7 (Term GPA > 3.5)</li>
@@ -53,12 +53,13 @@
 <h2>Work Experience</h2>
 <section id="experience">
     <% @jobs.each do |job| %>
-        <h3><%= job.title %></h3>
-        <h4>at <%= job.employer %></h4>
+        <p><strong><%= job.title %></strong>
+        at <%= job.employer %>:
         <% if job.end_date %>
-            <p><%= job.start_date %> - <%= job.end_date %><p>
+            <%= job.start_date.strftime("%B") %>, <%= job.start_date.year %> - <%= job.end_date %>
         <% else %>
-            <p>Current</p>
+            <%= job.start_date.strftime("%B") %>, <%= job.start_date.year %> - Current
         <% end %>
+        </h4>
     <% end %>
 </section>
