@@ -13,12 +13,14 @@
     </section>
 <% end %>
 
-<h2>Other Experience with <%= @skill.name %></h2>
-<section class="panel">
-    <% @skill.experiences.each do |experience| %>
-        <section class="skill-detail">
-            <h4 class="experienceName"><%= experience.name %><h4> 
-            <p class="experienceSource">from <%= experience.source %></p>
-        </section>
-    <% end %>
-</section>
+<% unless @skill.experiences.blank?%>
+    <h2>Other Experience with <%= @skill.name %></h2>
+    <section class="panel">
+        <% @skill.experiences.each do |experience| %>
+            <section class="skill-detail">
+                <h4 class="experienceName"><%= experience.name %><h4> 
+                <p class="experienceSource">from <%= experience.source %></p>
+            </section>
+        <% end %>
+    </section>
+<% end %>
