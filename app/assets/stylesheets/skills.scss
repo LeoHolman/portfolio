@@ -4,6 +4,15 @@
 
 @import 'variables';
 
+
+.skill-button {
+    background-color: $near-black;
+    padding: 4px 7px;
+    border: solid 1px $orange;
+    border-radius: 10px;
+    color: $orange;
+}
+
 .skill-detail {
     border-left: 3px solid $orange;
     padding-left: .5em;

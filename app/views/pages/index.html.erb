@@ -10,7 +10,7 @@
                 <h3><%= skill_set.name %></h3>
                 <% skill_set.skills.each do |skill| %>
                     <%= link_to(skill_path(skill)) do %>
-                        <h4><%= skill.name %></h4>
+                        <button class="skill-button"><%= skill.name %></button>
                     <% end %>
                 <% end %>
             <% end %>
