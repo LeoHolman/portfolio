@@ -13,6 +13,13 @@
     color: $orange;
 }
 
+.skill-button:hover {
+    background-color: $orange;
+    color: $near-black;
+    animation-name: fadeBlackToOrange;
+    animation-duration: 0.3s;
+}
+
 .skill-detail {
     border-left: 3px solid $orange;
     padding-left: .5em;
@@ -36,6 +43,13 @@
     text-align: center;
 }
 
+.skills:hover {
+    animation-name: fadeBlackToOrange;
+    animation-duration: 0.3s;
+    background-color: $orange;
+    color: $near-black;
+}
+
 .skills a{
     text-decoration: none;
 }
@@ -43,3 +57,4 @@
 .skills h3 {
     padding-top: 20px;
 }
+

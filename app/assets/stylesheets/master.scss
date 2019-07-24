@@ -125,4 +125,13 @@ strong {
     font-family: 'Source Sans Pro', 'Helvetica', sans-serif;
 }
 
+// Animations
+@keyframes fadeBlackToOrange{
+    from {
+        background-color: $near-black;
+    }
 
+    to {
+        background-color: $orange;
+    }
+}
