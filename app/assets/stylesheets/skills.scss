@@ -27,9 +27,10 @@
 }
 
 .skills {
-    color: $dark-gray;
-    background-color: white;
-    border-radius: 7px;
+    color: $orange;
+    // background-color: white;
+    border: 1px solid $orange;
+    border-radius: 4px;
     box-shadow: 3px 3px 10px black, -3px -3px 10px black;
     height: 100px;
     text-align: center;
@@ -40,5 +41,5 @@
 }
 
 .skills h3 {
-    padding-top: 30px;
+    padding-top: 20px;
 }
