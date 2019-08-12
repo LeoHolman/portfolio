@@ -1,24 +1,3 @@
-# README
+# portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I wanted to make a portfolio that was easy to edit and showed a bit about the projects I've worked on, so I created this. It uses a Postgres database to store information about projects, jobs, skills, and relationships between these entities then creates up-to-date views for them using the Rails framework. 
